@@ -2,15 +2,15 @@
 
 ## Definitions
 
-`f >> g` := `lambda x: g(f(x))`
+`f >> g` : `lambda x: g(f(x))`
 
-`f + g` := `lambda x,y: (f(x), g(y))`
+`f + g` : `lambda x,y: (f(x), g(y))`
 
-`f * 3` := `f + f + f`
+`f * 3` : `f + f + f`
 
-`f & g` := `lambda x: (f(x), g(x))` or `split_arr >> (f + g)`
+`f & g` : `lambda x: (f(x), g(x))` or `split_arr >> (f + g)`
 
-`[f]` or `~f` := `lambda l: map(f, l)`
+`[f]` or `~f` : `lambda l: map(f, l)`
 
 ## Example
 
