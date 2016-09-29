@@ -12,6 +12,18 @@
 
 `[f]` or `~f`: `lambda l: map(f, l)`
 
+## Laws
+ 
+`(f >> g) >> h` = `f >> (g >> h)` / `(f + g) + h` = `f + (g + h)`
+
+`(f0 + g0) >> (f1 + g1)` = `(f0 >> f1) + (g0 >> g1)`
+
+`[f] >> [g]` = `[f >> g]`
+
+`f * i` = `f + f * (i - 1)` / `f * 0` = `pass_arr`
+
+`f & g` = `split_arr >> (f + g)`
+
 ## Example
 
 ```Python
