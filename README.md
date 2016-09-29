@@ -16,7 +16,7 @@
 
 `split_arr` = `lambda x: (x, x)`
 
-note: In Haskell, there is a function `first :: a b c -> a (b,d) (c,d)`. In our Python arrow, we do not implement it by default. However, the same effort can be done by `f + pass_arr`. Also, `f + g` equals `first f >> second g`.
+note: In Haskell, there is a function `first :: a b c -> a (b,d) (c,d)`. In our Python arrow, we do not implement it by default. However, the same effort can be done by `+ pass_arr`. Actually, `first f` is equivalent to `f + pass_arr`, `second g` is equivalent to `pass_arr + g`, and `f + g` is equivalent to `first f >> second g`.
 
 ## Laws
  
