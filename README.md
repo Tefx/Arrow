@@ -12,11 +12,17 @@
 
 `[f]` or `~f`: `lambda l: map(f, l)`
 
+`pass_arr` = `lambda x: x`
+
+`split_arr` = `lambda x: (x, x)`
+
+note: In Haskell, there is a function `first :: a b c -> a (b,d) (c,d)`. In our Python arrow, we do not implement it by default. However, the same effort can be done by `f + pass_arr`. Also, `f + g` equals `first f >> second g`.
+
 ## Laws
  
-`(f >> g) >> h` = `f >> (g >> h)` / `(f + g) + h` = `f + (g + h)`
+`f >> g >> h` = `f >> (g >> h)` / `f + g + h` = `f + (g + h)`
 
-`(f0 + g0) >> (f1 + g1)` = `(f0 >> f1) + (g0 >> g1)`
+`f0 + g0 >> (f1 + g1)` = `(f0 >> f1) + (g0 >> g1)`
 
 `[f] >> [g]` = `[f >> g]`
 
