@@ -8,11 +8,11 @@
 
 `f + g`: `lambda x,y: (f(x), g(y))`
 
+`[f]` or `~f`: `lambda l: map(f, l)`
+
 `f * 3`: `f + f + f`
 
 `f & g`: `lambda x: (f(x), g(x))` or `split_arr >> (f + g)`
-
-`[f]` or `~f`: `lambda l: map(f, l)`
 
 ### Special arrows
 
@@ -26,7 +26,7 @@ note: In Haskell, there is a function `first :: a b c -> a (b,d) (c,d)`. In our 
  
 `f >> g >> h` = `f >> (g >> h)` / `f + g + h` = `f + (g + h)`
 
-`f0 + g0 >> (f1 + g1)` = `(f0 >> f1) + (g0 >> g1)`
+`(f0 + g0) >> (f1 + g1)` = `(f0 >> f1) + (g0 >> g1)`
 
 `[f] >> [g]` = `[f >> g]`
 
