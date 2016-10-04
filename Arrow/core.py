@@ -136,13 +136,13 @@ def split_arr(arg):
 
 
 @Arrow
-def swap(args):
+def swap_arr(args):
     x, y = args
     return y, x
 
 
 @Arrow
-def rotate(args):
+def rotate_arr(args):
     x, y = args
     if isinstance(x, tuple) or isinstance(x, list):
         x0, x1 = x
@@ -150,3 +150,11 @@ def rotate(args):
     else:
         y0, y1 = y
         return (x, y0), y1
+
+
+def first(arr):
+    return arr + pass_arr
+
+
+def second(arr):
+    return pass_arr + arr
