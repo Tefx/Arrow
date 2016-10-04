@@ -16,14 +16,14 @@
 
 ### Special arrows
 
-`pass_arr` = `lambda x: x`
+`pass_arr(x) = x`
 
-`split_arr` = `lambda x: (x, x)`
+`split_arr(x) = (x, x)`
 
-`swap_arr = lambda (x, y): (y, x)`
+`swap_arr((x, y)) = (y, x)`
 
-`rotate_arr = lambda ((x, y), z): (x, (y, z))
-                     (x, (y, z)): ((x, y), z)`
+`rotate_arr(((x, y), z)) = (x, (y, z))`
+`rotate_arr((x, (y, z))) = ((x, y), z)`
 
 note: In Haskell, there is a function `first :: a b c -> a (b,d) (c,d)`. In our Python arrow, we do not implement it by default. However, the same effort can be done by `+ pass_arr`. Actually, `first f` is equivalent to `f + pass_arr`, `second g` is equivalent to `pass_arr + g`, and `f + g` is equivalent to `first f >> second g`.
 
